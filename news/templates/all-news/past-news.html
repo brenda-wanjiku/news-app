@@ -1,0 +1,24 @@
+{% extends 'all-news/base.html' %}
+
+{% block content %}
+{{ block.super }}
+<div class="container">
+
+{% for item_news in news%}
+<div class="row">
+    <!-- displaying News articles -->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h2 class="text-center"> {{ news_item.title }}</h2>
+        </div>
+</div>
+
+{% empty %}
+<div class="row">
+    <h2 class="text-center"> There are no News items at the moment</h2>
+</div>
+
+{% endfor %}
+</div>
+
+
+{% endblock %}
